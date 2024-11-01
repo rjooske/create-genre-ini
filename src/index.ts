@@ -21,7 +21,7 @@ function createGenreIni(
 
 function stringToDownloadableUri(s: string): string {
   const encoded = iconv.encode(s, "SHIFT-JIS");
-  let uri = "data:text/plain;charset=utf-8,";
+  let uri = "data:charset=shift-jis,";
   for (const byte of encoded) {
     uri += `%${byte.toString(16).padStart(2, "0")}`;
   }
