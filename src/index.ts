@@ -29,17 +29,29 @@ function stringToDownloadableUri(s: string): string {
 }
 
 function main() {
+  const previewSpan = document.getElementById("preview");
   const genreNameInput = document.getElementById("genre-name");
   const backgroundColorInput = document.getElementById("background-color");
   const foregroundColorInput = document.getElementById("foreground-color");
   const downloadButton = document.getElementById("download");
 
   assert(
-    genreNameInput instanceof HTMLInputElement &&
+    previewSpan instanceof HTMLSpanElement &&
+      genreNameInput instanceof HTMLInputElement &&
       backgroundColorInput instanceof HTMLInputElement &&
       foregroundColorInput instanceof HTMLInputElement &&
       downloadButton instanceof HTMLButtonElement,
   );
+
+  genreNameInput.addEventListener("input", () => {
+    previewSpan.textContent = genreNameInput.value;
+  });
+  backgroundColorInput.addEventListener("input", () => {
+    previewSpan.style.backgroundColor = `#${backgroundColorInput.value}`;
+  });
+  foregroundColorInput.addEventListener("input", () => {
+    previewSpan.style.color = `#${foregroundColorInput.value}`;
+  });
 
   downloadButton.addEventListener("click", () => {
     const genreIni = createGenreIni(

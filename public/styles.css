@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "taiko";
+  src: url("taiko.ttf");
+}
+
+body {
+  font-family: sans-serif;
+}
+
+#preview {
+  background-color: #ff7028;
+  color: #ffffff;
+  padding: 2ch 8ch;
+  display: inline-block;
+  font-family: taiko;
+}

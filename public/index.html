@@ -4,20 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>genre.ini生成</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div>
+      <span id="preview">ナムコオリジナル</span>
+    </div>
+
     <ul>
       <li>
         <label for="genre-name">ジャンル名:</label>
-        <input type="text" id="genre-name" />
+        <input type="text" id="genre-name" value="ナムコオリジナル" />
       </li>
       <li>
         <label for="background-color">背景色:</label>
-        <input type="text" id="background-color" />
+        <span>#</span>
+        <input type="text" id="background-color" value="ff7028" />
       </li>
       <li>
         <label for="foreground-color">前景色:</label>
-        <input type="text" id="foreground-color" />
+        <span>#</span>
+        <input type="text" id="foreground-color" value="ffffff" />
       </li>
     </ul>
     <button id="download">ダウンロード</button>
