@@ -14,8 +14,8 @@ function createGenreIni(
   return [
     "[Genre]",
     `GenreName=${name}`,
-    `GenreColor=${backgroundColor}`,
-    `FontColor=${foregroundColor}`,
+    `GenreColor=#${backgroundColor}`,
+    `FontColor=#${foregroundColor}`,
   ].join("\r\n");
 }
 
